@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="./profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="profile-container">
+        <header class="profile-header">
+            <h2>Profile</h2> 
+            <button class="close-btn"><i class="ri-close-line"></i></button>          
+        </header>
+        
+        <div class="profile-section">
+            <h3>User Information</h3>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="profile-pic">Profile Picture:</label>
+                <input type="file" id="profile-pic" accept="image/*">
+                <img id="profile-pic-preview" src="" alt="Profile Picture" class="profile-pic-preview">
+            </div>
+        </div>
+
+        <div class="footer-buttons">
+            <button class="cancel-btn">Cancel</button>
+            <button class="save-btn">Save Changes</button>
+        </div>
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+</html>

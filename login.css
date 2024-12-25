@@ -1,0 +1,191 @@
+/* Root Variables */
+:root {
+    --primary-color: #00ff95;
+    --secondary-color: #0a1128;
+    --accent-color: #00eeff;
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --gradient-start: rgba(10, 17, 40, 0.95);
+    --gradient-end: rgba(0, 255, 149, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+/* Global Styles */
+body {
+    background: linear-gradient(135deg, var(--secondary-color), #000);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Main Container */
+.login-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    background: linear-gradient(to bottom right, var(--gradient-start), var(--gradient-end));
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 255, 149, 0.1);
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+}
+
+/* Header Styles */
+.login-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.login-header h2 {
+    margin: 0;
+    color: var(--primary-color);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.login-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50%;
+    height: 2px;
+    background: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+/* Form Styles */
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 15px rgba(0, 255, 149, 0.2);
+}
+
+input[type="checkbox"] {
+    accent-color: var(--primary-color);
+}
+
+/* Button Styles */
+.login-btn {
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: var(--primary-color);
+    border: none;
+    color: var(--secondary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.login-btn:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 238, 255, 0.3);
+}
+
+/* Extra Options */
+.extra-options {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.extra-options a {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.extra-options a:hover {
+    color: var(--primary-color);
+}
+
+/* Footer Buttons */
+.footer-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--glass-border);
+}
+
+.cancel-btn {
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    background: transparent;
+    border: 1px solid var(--text-secondary);
+    color: var(--text-secondary);
+}
+
+.cancel-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--text-primary);
+    color: var(--text-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .login-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .footer-buttons {
+        flex-direction: column-reverse;
+        gap: 1rem;
+    }
+
+    .cancel-btn, .login-btn {
+        width: 100%;
+        padding: 1rem;
+    }
+}
