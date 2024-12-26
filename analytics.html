@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics</title>
+    <link rel="stylesheet" href="./analytics.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="analytics-container">
+        <header class="analytics-header">
+            <h2>Profile Analytics</h2>
+            <button class="close-btn"><i class="ri-close-line"></i></button>
+        </header>
+
+        <div class="analytics-section">
+            <h3>Account Overview</h3>
+            <div class="stat-card">
+                <h4>Total Logins</h4>
+                <p id="total-logins">0</p>
+            </div>
+            <div class="stat-card">
+                <h4>Recent Activity</h4>
+                <ul id="activity-list">
+                    <!-- List of recent activities will be populated here -->
+                </ul>
+            </div>
+        </div>
+
+        <div class="analytics-section">
+            <h3>Usage Trends</h3>
+            <canvas id="usage-chart"></canvas>
+        </div>
+
+        <div class="footer-buttons">
+            <button class="back-btn">Back to Dashboard</button>
+        </div>
+    </div>
+
+    <script src="analytics.js"></script>
+</body>
+</html>

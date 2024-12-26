@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="stylesheet" href="./Homepage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="#" class="budget-text">Expense Ease</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="./goal.html">SET UR GOAL</a></li>
+                    <li><a href="./analytics.html">Analytics</a></li>
+                    <li><a href="./settings.html">Settings</a></li>
+                    <li><a href="./profile.html">Profile</a><li>
+                </ul>
+            </nav>
+            <div class="cta-buttons">
+                <button id="logoutButton" style="display:none;">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="dashboard"></div>
+        <div class="content-container">
+            <div class="header">
+                <div class="monthly-limit">
+                    <p>Monthly Limit</p>
+                    <h3>$1000/-</h3>
+                </div>
+                <div class="yearly-limit">
+                    <p>Yearly Limit</p>
+                    <h3>$12000/-</h3>
+                </div>
+                <div class="total-balance">
+                    <p>Total Balance</p>
+                    <h3>$0/-</h3>
+                </div>
+            </div>
+
+            <div class="dashboard">
+                <div class="card">
+                    <h2>Add New Expense</h2>
+                    <form id="expenseForm" class="expense-form">
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <input type="text" id="description" placeholder="Enter expense description" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="amount">Amount</label>
+                            <input type="number" id="amount" placeholder="Enter amount" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <select id="category" required>
+                                <option value="">Select category</option>
+                                <option value="Food">Food</option>
+                                <option value="Transportation">Transportation</option>
+                                <option value="Entertainment">Entertainment</option>
+                                <option value="Shopping">Shopping</option>
+                                <option value="Bills">Bills</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Date</label>
+                            <input type="date" id="date" required>
+                        </div>
+                        <button type="submit">Add Expense</button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h2>Summary</h2>
+                    <div class="summary">
+                        <div>
+                            <h3>Total Expenses</h3>
+                            <p id="totalAmount">$0.00</p>
+                        </div>
+                        <div>
+                            <h3>Total Items</h3>
+                            <p id="totalItems">0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Expense List</h2>
+                <div id="expenseList" class="expense-list"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#">Project Description</a></li>
+                    <li><a href="#">Team Members</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2024 Polaris School Of Technology. All rights reserved.
+        </div>
+    </footer>
+    <script src="./Homepage.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="./settings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="settings-container">
+        <header class="settings-header">
+          <h2>Settings</h2> 
+          <button class="close-btn"><i class="ri-close-line"></i></button>          
+        </header>
+    
+        <div class="settings-section">
+          <h3>General Settings</h3>
+          <div class="form-group">
+            <label for="currency-select">Currency:</label>
+            <select id="currency-select">
+              <option value="USD">USD - US Dollar</option>
+              <option value="EUR">EUR - Euro</option>
+              <option value="INR">INR - Indian Rupee</option>
+            </select>
+          </div>
+        </div>
+    
+        <div class="settings-section">
+          <h3>Budget Preferences</h3>
+          <p>Set your preferred budget frequency.</p>
+          <div class="form-group radio-group">
+            <label>
+              <input type="radio" name="budget-frequency" value="monthly" id="monthly-budget"> Monthly
+            </label>
+            <label>
+              <input type="radio" name="budget-frequency" value="yearly" id="yearly-budget"> Yearly
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="monthly-budget-input">Monthly Budget:</label>
+            <input type="number" id="monthly-budget-input" placeholder="Enter monthly budget">
+          </div>
+          <div class="form-group">
+            <label for="yearly-budget-input">Yearly Budget:</label>
+            <input type="number" id="yearly-budget-input" placeholder="Enter yearly budget">
+          </div>
+        </div>
+    
+        <div class="footer-buttons">
+          <button class="cancel-btn">Cancel</button>
+          <button class="save-btn">Save Changes</button>
+        </div>
+      </div>
+
+      <script src="settings.js"></script>
+      
+
+</body>
+</html>
