@@ -105,7 +105,7 @@ function updateSummary() {
 document.getElementById('logoutButton').addEventListener('click', () => {
   localStorage.removeItem('currentUser');
   localStorage.removeItem('loginTime');
-  window.location.href = 'login.html';
+  window.location.href = 'index.html';
 });
 
 // Initialize page on load
